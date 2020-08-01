@@ -5,6 +5,9 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
+
+
+
 function preload()
 {
 	helicopterIMG=loadImage("helicopter.png")
@@ -15,14 +18,22 @@ function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
 	
+	var cardboard1 = createSprite(400,650,200,10)
+	var cardboard2 = createSprite(300,600,10,100) 
+	var cardboard3 = createSprite(500,600,10,100)	
+
+
+	
 
 	packageSprite=createSprite(width/2, 80, 10,10);
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
+    packageSprite.velocityX=2
 
 	helicopterSprite=createSprite(width/2, 200, 10,10);
 	helicopterSprite.addImage(helicopterIMG)
 	helicopterSprite.scale=0.6
+    helicopterSprite.velocityX=2
 
 	groundSprite=createSprite(width/2, height-35, width,10);
 	groundSprite.shapeColor=color(255)
